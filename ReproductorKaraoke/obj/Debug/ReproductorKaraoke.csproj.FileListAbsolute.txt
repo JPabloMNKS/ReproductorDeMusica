@@ -1,0 +1,15 @@
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\ReproductorKaraoke.exe.config
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\ReproductorKaraoke.exe
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\ReproductorKaraoke.pdb
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\MACTrackBarLib.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\MetroFramework.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.Form1.resources
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.Properties.Resources.resources
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.csproj.GenerateResource.cache
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.csproj.CoreCompileInputs.cache
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.csproj.CopyComplete
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.exe
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.pdb
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.csprojAssemblyReference.cache
