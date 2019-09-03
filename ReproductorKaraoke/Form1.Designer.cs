@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LeftSidePane = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -46,33 +47,43 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BottomPane = new System.Windows.Forms.Panel();
+            this.wmPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.btnPrevious = new System.Windows.Forms.PictureBox();
+            this.btnNext = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tbVolume = new XComponent.SliderBar.MACTrackBar();
+            this.songName = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDuration = new System.Windows.Forms.Label();
+            this.txtActual = new System.Windows.Forms.Label();
+            this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.txtBoxUsuario = new System.Windows.Forms.TextBox();
+            this.txtBoxContrasena = new System.Windows.Forms.TextBox();
+            this.btnLog = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.macTrackBar2 = new XComponent.SliderBar.MACTrackBar();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.songList = new System.Windows.Forms.ListBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.musicFiles = new System.Windows.Forms.OpenFileDialog();
+            this.time = new System.Windows.Forms.Timer(this.components);
             this.LeftSidePane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.TopPane.SuspendLayout();
             this.BottomPane.SuspendLayout();
-            this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wmPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panelTop.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftSidePane
@@ -91,7 +102,7 @@
             this.LeftSidePane.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftSidePane.Location = new System.Drawing.Point(0, 0);
             this.LeftSidePane.Name = "LeftSidePane";
-            this.LeftSidePane.Size = new System.Drawing.Size(249, 756);
+            this.LeftSidePane.Size = new System.Drawing.Size(249, 773);
             this.LeftSidePane.TabIndex = 0;
             // 
             // button8
@@ -200,6 +211,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Canciones";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // label2
             // 
@@ -245,7 +257,7 @@
             this.TopPane.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPane.Location = new System.Drawing.Point(249, 51);
             this.TopPane.Name = "TopPane";
-            this.TopPane.Size = new System.Drawing.Size(1129, 237);
+            this.TopPane.Size = new System.Drawing.Size(1101, 237);
             this.TopPane.TabIndex = 1;
             // 
             // label1
@@ -310,37 +322,228 @@
             // BottomPane
             // 
             this.BottomPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.BottomPane.Controls.Add(this.pictureBox6);
-            this.BottomPane.Controls.Add(this.pictureBox5);
-            this.BottomPane.Controls.Add(this.pictureBox4);
+            this.BottomPane.Controls.Add(this.wmPlayer);
+            this.BottomPane.Controls.Add(this.btnPrevious);
+            this.BottomPane.Controls.Add(this.btnNext);
+            this.BottomPane.Controls.Add(this.btnPlay);
             this.BottomPane.Controls.Add(this.pictureBox3);
-            this.BottomPane.Controls.Add(this.macTrackBar2);
-            this.BottomPane.Controls.Add(this.label8);
+            this.BottomPane.Controls.Add(this.tbVolume);
+            this.BottomPane.Controls.Add(this.songName);
             this.BottomPane.Controls.Add(this.label7);
-            this.BottomPane.Controls.Add(this.label6);
-            this.BottomPane.Controls.Add(this.label5);
-            this.BottomPane.Controls.Add(this.pictureBox1);
+            this.BottomPane.Controls.Add(this.txtDuration);
+            this.BottomPane.Controls.Add(this.txtActual);
             this.BottomPane.Controls.Add(this.macTrackBar1);
             this.BottomPane.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPane.Location = new System.Drawing.Point(249, 649);
+            this.BottomPane.Location = new System.Drawing.Point(249, 666);
             this.BottomPane.Name = "BottomPane";
-            this.BottomPane.Size = new System.Drawing.Size(1129, 107);
+            this.BottomPane.Size = new System.Drawing.Size(1101, 107);
             this.BottomPane.TabIndex = 2;
+            // 
+            // wmPlayer
+            // 
+            this.wmPlayer.Enabled = true;
+            this.wmPlayer.Location = new System.Drawing.Point(6, 10);
+            this.wmPlayer.Name = "wmPlayer";
+            this.wmPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmPlayer.OcxState")));
+            this.wmPlayer.Size = new System.Drawing.Size(115, 85);
+            this.wmPlayer.TabIndex = 3;
+            this.wmPlayer.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.WmPlayer_PlayStateChange);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(467, 43);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(61, 52);
+            this.btnPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnPrevious.TabIndex = 20;
+            this.btnPrevious.TabStop = false;
+            this.btnPrevious.Click += new System.EventHandler(this.BtnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Location = new System.Drawing.Point(618, 43);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(61, 52);
+            this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNext.TabIndex = 19;
+            this.btnNext.TabStop = false;
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
+            this.btnPlay.Location = new System.Drawing.Point(534, 34);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(78, 70);
+            this.btnPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnPlay.TabIndex = 18;
+            this.btnPlay.TabStop = false;
+            this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(878, 37);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // tbVolume
+            // 
+            this.tbVolume.BackColor = System.Drawing.Color.Transparent;
+            this.tbVolume.BorderColor = System.Drawing.Color.Lime;
+            this.tbVolume.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbVolume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
+            this.tbVolume.IndentHeight = 6;
+            this.tbVolume.Location = new System.Drawing.Point(957, 43);
+            this.tbVolume.Maximum = 10;
+            this.tbVolume.Minimum = 0;
+            this.tbVolume.Name = "tbVolume";
+            this.tbVolume.Size = new System.Drawing.Size(138, 28);
+            this.tbVolume.TabIndex = 16;
+            this.tbVolume.TextTickStyle = System.Windows.Forms.TickStyle.None;
+            this.tbVolume.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(146)))), ((int)(((byte)(148)))));
+            this.tbVolume.TickHeight = 4;
+            this.tbVolume.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tbVolume.TrackerColor = System.Drawing.Color.DarkGreen;
+            this.tbVolume.TrackerSize = new System.Drawing.Size(16, 16);
+            this.tbVolume.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
+            this.tbVolume.TrackLineHeight = 7;
+            this.tbVolume.TrackLineSelectedColor = System.Drawing.Color.Lime;
+            this.tbVolume.Value = 0;
+            this.tbVolume.Scroll += new System.EventHandler(this.TbVolume_Scroll);
+            // 
+            // songName
+            // 
+            this.songName.AutoSize = true;
+            this.songName.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.songName.ForeColor = System.Drawing.Color.White;
+            this.songName.Location = new System.Drawing.Point(127, 65);
+            this.songName.Name = "songName";
+            this.songName.Size = new System.Drawing.Size(80, 21);
+            this.songName.TabIndex = 15;
+            this.songName.Text = "Rooster";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(127, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 24);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Alice in Chains";
+            // 
+            // txtDuration
+            // 
+            this.txtDuration.AutoSize = true;
+            this.txtDuration.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuration.ForeColor = System.Drawing.Color.White;
+            this.txtDuration.Location = new System.Drawing.Point(1048, 10);
+            this.txtDuration.Name = "txtDuration";
+            this.txtDuration.Size = new System.Drawing.Size(47, 21);
+            this.txtDuration.TabIndex = 13;
+            this.txtDuration.Text = "0:00";
+            // 
+            // txtActual
+            // 
+            this.txtActual.AutoSize = true;
+            this.txtActual.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActual.ForeColor = System.Drawing.Color.White;
+            this.txtActual.Location = new System.Drawing.Point(127, 10);
+            this.txtActual.Name = "txtActual";
+            this.txtActual.Size = new System.Drawing.Size(47, 21);
+            this.txtActual.TabIndex = 12;
+            this.txtActual.Text = "0:00";
+            // 
+            // macTrackBar1
+            // 
+            this.macTrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.macTrackBar1.BorderColor = System.Drawing.Color.Lime;
+            this.macTrackBar1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.macTrackBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
+            this.macTrackBar1.IndentHeight = 6;
+            this.macTrackBar1.Location = new System.Drawing.Point(180, 3);
+            this.macTrackBar1.Maximum = 10;
+            this.macTrackBar1.Minimum = 0;
+            this.macTrackBar1.Name = "macTrackBar1";
+            this.macTrackBar1.Size = new System.Drawing.Size(862, 28);
+            this.macTrackBar1.TabIndex = 0;
+            this.macTrackBar1.TextTickStyle = System.Windows.Forms.TickStyle.None;
+            this.macTrackBar1.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(146)))), ((int)(((byte)(148)))));
+            this.macTrackBar1.TickHeight = 4;
+            this.macTrackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.macTrackBar1.TrackerColor = System.Drawing.Color.DarkGreen;
+            this.macTrackBar1.TrackerSize = new System.Drawing.Size(16, 16);
+            this.macTrackBar1.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
+            this.macTrackBar1.TrackLineHeight = 7;
+            this.macTrackBar1.TrackLineSelectedColor = System.Drawing.Color.Lime;
+            this.macTrackBar1.Value = 0;
+            this.macTrackBar1.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.MacTrackBar1_ValueChanged);
+            this.macTrackBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MacTrackBar1_MouseDown);
+            this.macTrackBar1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MacTrackBar1_MouseUp);
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panelTop.Controls.Add(this.btnAgregar);
+            this.panelTop.Controls.Add(this.txtBoxUsuario);
+            this.panelTop.Controls.Add(this.txtBoxContrasena);
+            this.panelTop.Controls.Add(this.btnLog);
             this.panelTop.Controls.Add(this.btnAdmin);
             this.panelTop.Controls.Add(this.btnMinimize);
             this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(249, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1129, 51);
+            this.panelTop.Size = new System.Drawing.Size(1101, 51);
             this.panelTop.TabIndex = 3;
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTop_MouseDown);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelTop_MouseMove);
             this.panelTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelTop_MouseUp);
+            // 
+            // txtBoxUsuario
+            // 
+            this.txtBoxUsuario.Location = new System.Drawing.Point(298, 15);
+            this.txtBoxUsuario.Name = "txtBoxUsuario";
+            this.txtBoxUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxUsuario.TabIndex = 6;
+            this.txtBoxUsuario.Visible = false;
+            // 
+            // txtBoxContrasena
+            // 
+            this.txtBoxContrasena.Location = new System.Drawing.Point(449, 15);
+            this.txtBoxContrasena.Name = "txtBoxContrasena";
+            this.txtBoxContrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxContrasena.TabIndex = 5;
+            this.txtBoxContrasena.Visible = false;
+            // 
+            // btnLog
+            // 
+            this.btnLog.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLog.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLog.ForeColor = System.Drawing.Color.White;
+            this.btnLog.Location = new System.Drawing.Point(711, 0);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(75, 51);
+            this.btnLog.TabIndex = 4;
+            this.btnLog.Text = "log";
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Visible = false;
+            this.btnLog.Click += new System.EventHandler(this.Button9_Click);
             // 
             // btnAdmin
             // 
@@ -351,7 +554,7 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.Location = new System.Drawing.Point(814, 0);
+            this.btnAdmin.Location = new System.Drawing.Point(786, 0);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(165, 51);
             this.btnAdmin.TabIndex = 3;
@@ -368,7 +571,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(979, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(951, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(75, 51);
             this.btnMinimize.TabIndex = 2;
@@ -385,7 +588,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1054, 0);
+            this.btnClose.Location = new System.Drawing.Point(1026, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 51);
             this.btnClose.TabIndex = 0;
@@ -393,176 +596,85 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // macTrackBar1
-            // 
-            this.macTrackBar1.BackColor = System.Drawing.Color.Transparent;
-            this.macTrackBar1.BorderColor = System.Drawing.Color.Lime;
-            this.macTrackBar1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.macTrackBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
-            this.macTrackBar1.IndentHeight = 6;
-            this.macTrackBar1.Location = new System.Drawing.Point(180, 3);
-            this.macTrackBar1.Maximum = 10;
-            this.macTrackBar1.Minimum = 0;
-            this.macTrackBar1.Name = "macTrackBar1";
-            this.macTrackBar1.Size = new System.Drawing.Size(884, 28);
-            this.macTrackBar1.TabIndex = 0;
-            this.macTrackBar1.TextTickStyle = System.Windows.Forms.TickStyle.None;
-            this.macTrackBar1.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(146)))), ((int)(((byte)(148)))));
-            this.macTrackBar1.TickHeight = 4;
-            this.macTrackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.macTrackBar1.TrackerColor = System.Drawing.Color.DarkGreen;
-            this.macTrackBar1.TrackerSize = new System.Drawing.Size(16, 16);
-            this.macTrackBar1.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
-            this.macTrackBar1.TrackLineHeight = 7;
-            this.macTrackBar1.TrackLineSelectedColor = System.Drawing.Color.Lime;
-            this.macTrackBar1.Value = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 92);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(127, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 21);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "0:00";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1070, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "0:00";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(127, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 24);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Alice in Chains";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(127, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Rooster";
-            // 
-            // macTrackBar2
-            // 
-            this.macTrackBar2.BackColor = System.Drawing.Color.Transparent;
-            this.macTrackBar2.BorderColor = System.Drawing.Color.Lime;
-            this.macTrackBar2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.macTrackBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
-            this.macTrackBar2.IndentHeight = 6;
-            this.macTrackBar2.Location = new System.Drawing.Point(979, 48);
-            this.macTrackBar2.Maximum = 10;
-            this.macTrackBar2.Minimum = 0;
-            this.macTrackBar2.Name = "macTrackBar2";
-            this.macTrackBar2.Size = new System.Drawing.Size(138, 28);
-            this.macTrackBar2.TabIndex = 16;
-            this.macTrackBar2.TextTickStyle = System.Windows.Forms.TickStyle.None;
-            this.macTrackBar2.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(146)))), ((int)(((byte)(148)))));
-            this.macTrackBar2.TickHeight = 4;
-            this.macTrackBar2.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.macTrackBar2.TrackerColor = System.Drawing.Color.DarkGreen;
-            this.macTrackBar2.TrackerSize = new System.Drawing.Size(16, 16);
-            this.macTrackBar2.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
-            this.macTrackBar2.TrackLineHeight = 7;
-            this.macTrackBar2.TrackLineSelectedColor = System.Drawing.Color.Lime;
-            this.macTrackBar2.Value = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(912, 37);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 52);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(534, 34);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(78, 70);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 18;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(618, 43);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(61, 52);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(467, 43);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(61, 52);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 20;
-            this.pictureBox6.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(249, 288);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(679, 361);
+            this.panel1.Size = new System.Drawing.Size(1101, 485);
             this.panel1.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(760, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(341, 485);
+            this.panel3.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel2.Controls.Add(this.songList);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(928, 288);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 361);
-            this.panel2.TabIndex = 5;
+            this.panel2.Size = new System.Drawing.Size(1101, 485);
+            this.panel2.TabIndex = 0;
+            // 
+            // songList
+            // 
+            this.songList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.songList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.songList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.songList.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.songList.ForeColor = System.Drawing.Color.White;
+            this.songList.FormattingEnabled = true;
+            this.songList.ItemHeight = 21;
+            this.songList.Location = new System.Drawing.Point(0, 0);
+            this.songList.Name = "songList";
+            this.songList.Size = new System.Drawing.Size(1101, 485);
+            this.songList.TabIndex = 2;
+            this.songList.SelectedIndexChanged += new System.EventHandler(this.SongList_SelectedIndexChanged);
+            this.songList.DoubleClick += new System.EventHandler(this.SongList_DoubleClick);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(590, 0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(121, 51);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Visible = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // musicFiles
+            // 
+            this.musicFiles.FileName = "musicFiles";
+            // 
+            // time
+            // 
+            this.time.Interval = 1000;
+            this.time.Tick += new System.EventHandler(this.Time_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1378, 756);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1350, 773);
             this.Controls.Add(this.BottomPane);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.TopPane);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.LeftSidePane);
@@ -577,12 +689,15 @@
             this.TopPane.PerformLayout();
             this.BottomPane.ResumeLayout(false);
             this.BottomPane.PerformLayout();
-            this.panelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wmPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -611,18 +726,26 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button8;
         private XComponent.SliderBar.MACTrackBar macTrackBar1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private XComponent.SliderBar.MACTrackBar macTrackBar2;
-        private System.Windows.Forms.Label label8;
+        private XComponent.SliderBar.MACTrackBar tbVolume;
+        private System.Windows.Forms.Label songName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txtDuration;
+        private System.Windows.Forms.Label txtActual;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox btnPrevious;
+        private System.Windows.Forms.PictureBox btnNext;
+        private System.Windows.Forms.PictureBox btnPlay;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListBox songList;
+        private System.Windows.Forms.Button btnLog;
+        public AxWMPLib.AxWindowsMediaPlayer wmPlayer;
+        private System.Windows.Forms.TextBox txtBoxUsuario;
+        private System.Windows.Forms.TextBox txtBoxContrasena;
+        private System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.OpenFileDialog musicFiles;
+        private System.Windows.Forms.Timer time;
     }
 }
 

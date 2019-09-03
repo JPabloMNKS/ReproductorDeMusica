@@ -13,3 +13,9 @@ E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorK
 E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.exe
 E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.pdb
 E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.csprojAssemblyReference.cache
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.Canciones.resources
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\Interop.WMPLib.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\bin\Debug\AxInterop.WMPLib.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\Interop.WMPLib.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\AxInterop.WMPLib.dll
+E:\Codigos\C#\Forms\ReproductorKaraoke\ReproductorKaraoke\obj\Debug\ReproductorKaraoke.csproj.ResolveComReference.cache
