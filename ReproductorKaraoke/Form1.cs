@@ -243,13 +243,12 @@ namespace ReproductorKaraoke
 
         private void MacTrackBar1_ValueChanged(object sender, decimal value)
         {
-            wmPlayer.Ctlcontrols.currentPosition = macTrackBar1.Value;
+//            wmPlayer.Ctlcontrols.currentPosition = macTrackBar1.Value;
         }
 
         private void MacTrackBar1_MouseDown(object sender, MouseEventArgs e)
         {
             wmPlayer.Ctlcontrols.pause();
-
         }
 
         private void MacTrackBar1_MouseUp(object sender, MouseEventArgs e)

@@ -59,6 +59,7 @@
             this.txtActual = new System.Windows.Forms.Label();
             this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.txtBoxContrasena = new System.Windows.Forms.TextBox();
             this.btnLog = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.songList = new System.Windows.Forms.ListBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.musicFiles = new System.Windows.Forms.OpenFileDialog();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.LeftSidePane.SuspendLayout();
@@ -511,6 +511,24 @@
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelTop_MouseMove);
             this.panelTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelTop_MouseUp);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(590, 0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(121, 51);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Visible = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
             // txtBoxUsuario
             // 
             this.txtBoxUsuario.Location = new System.Drawing.Point(298, 15);
@@ -639,24 +657,6 @@
             this.songList.TabIndex = 2;
             this.songList.SelectedIndexChanged += new System.EventHandler(this.SongList_SelectedIndexChanged);
             this.songList.DoubleClick += new System.EventHandler(this.SongList_DoubleClick);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(590, 0);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(121, 51);
-            this.btnAgregar.TabIndex = 7;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Visible = false;
-            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // musicFiles
             // 
